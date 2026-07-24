@@ -40,7 +40,7 @@ cost of more false alarms.
 
 We scan the precision-recall curve and pick the threshold that **minimizes total estimated cost**
 (`FP_count × $5 + FN_count × $122`) rather than using the default 0.5 cutoff. This produced a
-threshold of **~0.107**, much lower than default — meaning we deliberately flag more transactions
+threshold of **~0.1117**, much lower than default — meaning we deliberately flag more transactions
 for review because missed fraud is so much more expensive.
 
 ### Training pipeline (sketch)
@@ -146,7 +146,7 @@ wrongly-blocked customer), so the comparison below is apples-to-apples.
 | Best model | Random Forest | Random Forest |
 | PR-AUC | **0.805** | 0.8015 |
 | ROC-AUC | 0.982 | 0.9848 |
-| Cost-optimal threshold | 0.107 | 0.4288 |
+| Cost-optimal threshold | 0.1117 | 0.4288 |
 | Recall | 83.8% (62 / 74) | 79.7% (59 / 74) |
 | Precision | 39.7% | 56.2% |
 | False Positives | ~94 | 46 |
